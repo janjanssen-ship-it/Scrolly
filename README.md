@@ -16,16 +16,22 @@ python3 -m http.server 8080
 ```
 Then open `http://localhost:8080`.
 
-## GitHub Pages setup
+## GitHub Actions deployment setup
+This repository deploys via GitHub Actions workflow:
+`/.github/workflows/deploy.yml`
+
+One-time repository setting:
 1. Go to repository `Settings`.
 2. Open `Pages` in the left menu.
 3. Under **Build and deployment**:
-   - Source: `Deploy from a branch`
-   - Branch: `main`
-   - Folder: `/ (root)`
-4. Click `Save`.
+   - Source: `GitHub Actions`
+4. Save (if prompted).
 
-After deployment, your site URL should be:
+Deployment behavior:
+- Every push to `main` triggers deployment.
+- You can also deploy manually via `Actions` -> `Deploy static site to GitHub Pages` -> `Run workflow`.
+
+Site URL:
 `https://janjanssen-ship-it.github.io/Scrolly/`
 
-Note: first publish can take 1-5 minutes.
+Note: first publish can take 1-5 minutes after the workflow run completes.
