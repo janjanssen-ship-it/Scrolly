@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minnesota und der Protest gegen ICE: Vier Bilder, vier Momente</title>
+  <style>
+    :root {
+      --bg: #f4f0ea;
+      --paper: #fffdfa;
+      --text: #1f1f1f;
+      --muted: #636363;
+      --accent: #b6402d;
+      --line: #d8d1c9;
+      --shadow: 0 14px 40px rgba(33, 20, 12, 0.08);
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 18%, #e7ddd1 0%, transparent 42%),
+        radial-gradient(circle at 85% 80%, #e8d8ca 0%, transparent 36%),
+        var(--bg);
+      line-height: 1.58;
+    }
+
+    .article {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 2.5rem 1.2rem 5rem;
+    }
+
+    .kicker {
+      display: inline-block;
+      border: 1px solid var(--line);
+      background: #efe8e0;
+      border-radius: 999px;
+      padding: 0.28rem 0.82rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: #4c4037;
+      margin-bottom: 0.9rem;
+    }
+
+    h1 {
+      margin: 0 0 1rem;
+      font-size: clamp(1.9rem, 4vw, 3.2rem);
+      line-height: 1.12;
+      max-width: 16ch;
+      text-wrap: balance;
+    }
+
+    .lead {
+      max-width: 72ch;
+      margin: 0 0 1.4rem;
+      font-size: 1.05rem;
+      color: #2f2b28;
+    }
+
+    .darum {
+      max-width: 760px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1rem 1.15rem;
+      margin-bottom: 2.1rem;
+    }
+
+    .darum h2 {
+      margin: 0 0 0.35rem;
+      font-size: 1rem;
+    }
+
+    .darum ul {
+      margin: 0;
+      padding-left: 1.05rem;
+      display: grid;
+      gap: 0.3rem;
+    }
+
+    .darum li {
+      font-size: 0.95rem;
+    }
+
+    #scrolly {
+      position: relative;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      margin-top: 1.5rem;
+    }
+
+    #scrolly-media {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      border-radius: 0;
+      border: 0;
+      overflow: hidden;
+      background: #120f0d;
+      box-shadow: none;
+      display: grid;
+      grid-template-rows: 1fr auto;
+    }
+
+    #scrolly-image {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      display: block;
+      opacity: 1;
+      transition: opacity 250ms ease;
+    }
+
+    #scrolly-image.fade-out {
+      opacity: 0.2;
+    }
+
+    .caption {
+      background: rgba(13, 11, 9, 0.86);
+      color: #ece6df;
+      padding: 0.74rem 0.88rem 0.82rem;
+      font-size: 0.83rem;
+      line-height: 1.42;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .caption a {
+      color: #f6c389;
+    }
+
+    #scrolly-steps {
+      position: relative;
+      display: grid;
+      gap: 56vh;
+      width: min(34rem, 92vw);
+      margin: -88vh 3vw 0 auto;
+      padding: 14vh 0 24vh;
+      z-index: 2;
+    }
+
+    .step {
+      background: rgba(255, 253, 250, 0.9);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1rem 1rem 1.05rem;
+      box-shadow: 0 10px 26px rgba(19, 11, 7, 0.06);
+      opacity: 0.64;
+      transform: translateY(8px);
+      transition: opacity 220ms ease, transform 240ms ease, border-color 220ms ease;
+      backdrop-filter: blur(2px);
+    }
+
+    .step.is-active {
+      opacity: 1;
+      transform: translateY(0);
+      border-color: #c5aa90;
+    }
+
+    .step h3 {
+      margin: 0 0 0.48rem;
+      font-size: 1.15rem;
+      line-height: 1.25;
+      text-wrap: balance;
+    }
+
+    .step p {
+      margin: 0;
+      color: #2b2724;
+    }
+
+    .closing {
+      margin-top: 2rem;
+      max-width: 74ch;
+      padding: 1rem 1.08rem;
+      border-left: 4px solid var(--accent);
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 0 10px 10px 0;
+    }
+
+    .sources {
+      margin-top: 2.2rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .sources ul {
+      margin: 0.35rem 0 0;
+      padding-left: 1.05rem;
+      display: grid;
+      gap: 0.28rem;
+    }
+
+    @media (max-width: 920px) {
+      #scrolly {
+        width: auto;
+        margin: 0;
+      }
+
+      #scrolly-media {
+        position: relative;
+        height: auto;
+      }
+
+      #scrolly-image {
+        height: 46vh;
+      }
+
+      #scrolly-steps {
+        width: auto;
+        margin: 0;
+        gap: 1rem;
+        padding: 1rem 0 0;
+      }
+
+      .step {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="article">
+    <span class="kicker">Reportage in vier Bildern</span>
+    <h1>Minnesota und der Protest gegen ICE: Vier Bilder, vier Momente</h1>
+
+    <p class="lead">
+      In Minneapolis demonstrieren Menschen gegen Einsaetze der US-Einwanderungsbehoerde ICE.
+      Die vier Aufnahmen zeigen, wie sich der Tag entwickelt: vom Zusammenkommen im Park bis zum
+      stilleren Ausklang in der Innenstadt. Der Fokus liegt auf den Szenen vor Ort und auf der Frage,
+      was in der Stimmung der Strasse sichtbar wird.
+    </p>
+
+    <section class="darum" aria-label="Darum gehts">
+      <h2>Darum gehts</h2>
+      <ul>
+        <li>Vier CC-Bilder dokumentieren den Verlauf eines Protests in Minneapolis.</li>
+        <li>Die Szene reicht von Mobilisierung bis zur angespannten Innenstadtstimmung.</li>
+        <li>Im Zentrum stehen Transparente, Gestik und Reaktionen im Stadtraum.</li>
+        <li>Die Story ordnet visuelle Eindruecke neutral und nachvollziehbar ein.</li>
+      </ul>
+    </section>
+
+    <section id="scrolly" aria-label="Scrollytelling zu Anti-ICE-Protesten in Minnesota">
+      <figure id="scrolly-media">
+        <img id="scrolly-image" src="assets/minnesota-ice-1.jpg" alt="Menschen versammeln sich in einem Park in Minneapolis zum Protest gegen ICE." loading="eager" decoding="async">
+        <figcaption class="caption" id="scrolly-credit"></figcaption>
+      </figure>
+
+      <div id="scrolly-steps">
+        <article class="step is-active" data-step="0">
+          <h3>1. Der Start: Viele kommen zusammen</h3>
+          <p>
+            Auf dem ersten Bild sammeln sich Demonstrierende im Park. Manche halten Schilder hoch,
+            andere bleiben vorerst in kleineren Gruppen. Genau diese Mischung ist typisch fuer den
+            Beginn solcher Aktionen: Noch ist vieles offen, aber die Richtung ist klar. Das Ziel,
+            das auf den Plakaten sichtbar wird, lautet Widerstand gegen ICE-Einsaetze in der Region.
+            Es ist ein Moment, in dem Organisation und Emotion gleichzeitig sichtbar sind. Die Szene
+            wirkt ruhig, aber sie traegt bereits die Spannung eines Tages, der nicht bei einer kurzen
+            Kundgebung bleiben wird.
+          </p>
+        </article>
+
+        <article class="step" data-step="1">
+          <h3>2. Der Zug bewegt sich durch die Strassen</h3>
+          <p>
+            Danach setzt sich der Demonstrationszug in Bewegung. Die zweite Aufnahme zeigt, wie aus
+            einzelnen Gruppen ein gemeinsamer Takt wird. Transparente, Rufe und eine dichte Menge
+            praegen das Bild. Damit veraendert sich auch die Wirkung nach aussen: Der Protest ist nicht
+            mehr nur am Sammelpunkt sichtbar, sondern praesent im Alltagsraum der Stadt. Fuer viele
+            Teilnehmende ist genau das zentral. Sie wollen, dass ihre Kritik nicht als Randthema im
+            Hintergrund bleibt, sondern im Zentrum der oeffentlichen Debatte erscheint.
+          </p>
+        </article>
+
+        <article class="step" data-step="2">
+          <h3>3. Der Kernmoment: Botschaften im Vordergrund</h3>
+          <p>
+            Das dritte Bild rueckt eine besonders dichte Szene in den Fokus. Schilder und Gesichter
+            transportieren klare Botschaften. Gleichzeitig zeigt das Foto auch die Ambivalenz solcher
+            Proteste: Es geht um Solidaritaet und Schutz, aber auch um Wut und Erschoepfung. In dieser
+            Phase verdichtet sich oft, worum es den Organisierenden politisch geht. Laut Aufrufen von
+            Aktivistinnen und Aktivisten geht es um den Schutz von Migrantinnen und Migranten sowie
+            um mehr Verantwortung lokaler Behoerden. Der visuelle Eindruck bleibt direkt und intensiv.
+          </p>
+        </article>
+
+        <article class="step" data-step="3">
+          <h3>4. Nach dem Hoehepunkt: Die Stadt atmet aus</h3>
+          <p>
+            Das vierte Bild stammt vom spaeteren Abschnitt in Downtown Minneapolis. Die Dynamik wirkt
+            ruhiger, doch die Anspannung bleibt spuerbar. Gerade solche Szenen nach dem Hoehepunkt sind
+            journalistisch wichtig: Sie zeigen, was nach den lauten Momenten bleibt. Menschen stehen,
+            diskutieren, orientieren sich neu. Der Protest ist dann nicht vorbei, sondern geht in eine
+            naechste Phase ueber. Klar ist: Die Bilder machen sichtbar, wie tief das Thema ICE in der
+            Stadtgesellschaft wirkt und wie dauerhaft die Auseinandersetzung gefuehrt wird.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="closing" aria-label="Schlussabschnitt">
+      Die vier Aufnahmen bilden keinen abgeschlossenen Endpunkt, sondern einen Ausschnitt aus einer
+      laufenden politischen Auseinandersetzung. Sie zeigen nicht nur einen Protesttag, sondern auch,
+      wie sich lokale Mobilisierung, oeffentlicher Raum und nationale Politik in Minneapolis ueberschneiden.
+    </section>
+
+    <section class="sources" aria-label="Quellen und Lizenzen">
+      <strong>Bildquellen und Lizenzhinweis</strong>
+      <p>
+        Alle vier Fotos stammen von Fibonacci Blue und sind unter
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>
+        lizenziert. Bei Bearbeitung wurden Dateien fuer Webdarstellung lokal skaliert.
+      </p>
+      <ul>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Gathering_for_a_protest_against_ICE_in_Minneapolis.jpg" target="_blank" rel="noopener noreferrer">Gathering for a protest against ICE in Minneapolis</a></li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Protest_march_against_ICE_in_Minneapolis.jpg" target="_blank" rel="noopener noreferrer">Protest march against ICE in Minneapolis</a></li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Protest_against_ICE_in_Minneapolis.jpg" target="_blank" rel="noopener noreferrer">Protest against ICE in Minneapolis</a></li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:After_the_protest_against_ICE_in_downtown_Minneapolis.jpg" target="_blank" rel="noopener noreferrer">After the protest against ICE in downtown Minneapolis</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    const scenes = [
+      {
+        imageSrc: "assets/minnesota-ice-1.jpg",
+        alt: "Menschen versammeln sich in einem Park in Minneapolis zum Protest gegen ICE.",
+        credit: "Foto 1/4: Fibonacci Blue, CC BY 4.0 &middot; <a href='https://commons.wikimedia.org/wiki/File:Gathering_for_a_protest_against_ICE_in_Minneapolis.jpg' target='_blank' rel='noopener noreferrer'>Wikimedia Commons</a>"
+      },
+      {
+        imageSrc: "assets/minnesota-ice-2.jpg",
+        alt: "Demonstrierende ziehen mit Transparenten durch eine Strasse in Minneapolis.",
+        credit: "Foto 2/4: Fibonacci Blue, CC BY 4.0 &middot; <a href='https://commons.wikimedia.org/wiki/File:Protest_march_against_ICE_in_Minneapolis.jpg' target='_blank' rel='noopener noreferrer'>Wikimedia Commons</a>"
+      },
+      {
+        imageSrc: "assets/minnesota-ice-3.jpg",
+        alt: "Dichte Protestszene mit Schildern und Menschen in Minneapolis.",
+        credit: "Foto 3/4: Fibonacci Blue, CC BY 4.0 &middot; <a href='https://commons.wikimedia.org/wiki/File:Protest_against_ICE_in_Minneapolis.jpg' target='_blank' rel='noopener noreferrer'>Wikimedia Commons</a>"
+      },
+      {
+        imageSrc: "assets/minnesota-ice-4.jpg",
+        alt: "Menschen nach der Demonstration in Downtown Minneapolis bei winterlichem Wetter.",
+        credit: "Foto 4/4: Fibonacci Blue, CC BY 4.0 &middot; <a href='https://commons.wikimedia.org/wiki/File:After_the_protest_against_ICE_in_downtown_Minneapolis.jpg' target='_blank' rel='noopener noreferrer'>Wikimedia Commons</a>"
+      }
+    ];
+
+    const imageEl = document.getElementById("scrolly-image");
+    const creditEl = document.getElementById("scrolly-credit");
+    const steps = Array.from(document.querySelectorAll(".step"));
+
+    function activateScene(index) {
+      const scene = scenes[index];
+      if (!scene) return;
+
+      imageEl.classList.add("fade-out");
+
+      window.setTimeout(() => {
+        imageEl.src = scene.imageSrc;
+        imageEl.alt = scene.alt;
+        creditEl.innerHTML = scene.credit;
+        imageEl.classList.remove("fade-out");
+      }, 130);
+
+      steps.forEach((step, i) => {
+        step.classList.toggle("is-active", i === index);
+      });
+    }
+
+    creditEl.innerHTML = scenes[0].credit;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const index = Number(entry.target.dataset.step);
+          activateScene(index);
+        });
+      },
+      {
+        threshold: 0.55,
+        rootMargin: "-10% 0px -20% 0px"
+      }
+    );
+
+    steps.forEach((step) => observer.observe(step));
+  </script>
+</body>
+</html>
